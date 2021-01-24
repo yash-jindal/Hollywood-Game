@@ -1,0 +1,28 @@
+body{
+  text-align: center;
+  font-size: 3rem;
+  background-image: linear-gradient(45deg, #ccffcc, #ffffcc);
+  background-size: 100%;
+}
+
+.name{
+  margin-top: 200px;
+  font-family: "Marker Felt", cursive;
+  font-weight: 600;
+  /* text-shadow: 2px 2px #ff0000; */
+  background-color: #f3ec78;
+  -webkit-text-stroke: 2px black;
+    background-image: linear-gradient(45deg, #6600ff, #ff33cc);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.check{
+  text-align: center;
+  padding-bottom: 1rem;
+  height: 50px;
+  width: 80px;
+}

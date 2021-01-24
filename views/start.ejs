@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hollywood Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <div class="name" >
+
+  <span class="name" >H</span>
+  <span class="name" >O</span>
+  <span class="name" >L</span>
+  <span class="name" >L</span>
+  <span class="name" >Y</span>
+  <span class="name" > - </span>
+  <span class="name" >W</span>
+  <span class="name" >O</span>
+  <span class="name" >O</span>
+  <span class="name" >D</span>
+
+  </div>
+  <br>
+  <span class="name">CHANCES LEFT: <%= chances %></span>
+  <br>
+
+
+  <% if(flag==="0"){ %>
+    <% for(i=0;i<movieName.length;i++){ %>
+
+      <% if(movieName[i]==="A" || movieName[i]==="E" || movieName[i]==="I" || movieName[i]==="O" || movieName[i]==="U"){ %>
+          <span class="name" ><%= movieName[i] %></span>
+      <% }else if(movieName[i]===" "){ %>
+            <span>&emsp;</span>
+        <% }else if(movieName[i]<"A" || movieName[i]>"Z"){ %>
+              <span class="name" ><%= movieName[i] %></span>
+        <% }else{ %>
+        <span class="name" >_</span>
+      <% } %>
+ <% } %>
+  <% }else{ %>
+    <% for(i=0;i<movieName.length;i++){ %>
+
+      <% if(movieName[i]==="A" || movieName[i]==="E" || movieName[i]==="I" || movieName[i]==="O" || movieName[i]==="U"){ %>
+          <span class="name"><%= movieName[i] %></span>
+      <% }else if(movieName[i]===" "){ %>
+            <span>&emsp;</span>
+        <% }else if(movieName[i]<"A" || movieName[i]>"Z"){ %>
+              <span class="name" ><%= movieName[i] %></span>
+        <% }else{ %>
+       <% if(found.search(movieName[i])>=0){ %>
+        <span class="name"><%= movieName[i] %></span>
+     <% }else{ %>
+        <span class="name">_</span>
+      <% } %>
+ <% } %>
+ <% } %>
+ <% } %>
+  <br>
+        
+
+
+
+
+
+
+ 
+  
+  <br>
+
+  <form class="" action="/start" method="POST">
+    <input class="check" type="text" name="char" value="" maxlength="1" onkeyup="this.value = this.value.toUpperCase();">
+    <button id="ha" class="btn btn-warning btn-lg" type="submit" name="button">Check</button>
+    </form>
+    <span class="name">ENTERED ALPHABETS: -</span>
+   <% for(j=0;j<character.length;j++){ %>
+      <span class="name"><%= character[j] %></span>
+   <% } %>
+  <form action="/" method="POST">
+  <button class="btn btn-warning btn-lg" type="submit" name="button">Exit Game</button>
+  </form>
+
+
+
+
+
+
+
+
+  </body>
+</html>
