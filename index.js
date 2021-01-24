@@ -10,7 +10,7 @@ const app = express();
 
 var hollywood = "";
 var found ="";
-var chance=7;
+var chance=5;
 var win = ["You are on fire!", "Nailed it!", "Making Streak is your habbit. Let's have an another shot.", "Hollywood is beneath you!", "Rockin' Awesome"]
 var required=0;
 var a=0;
@@ -31,7 +31,7 @@ app.get("/",function(req,res){
   hollywood = "";
   found ="";
   alphabets = "";
-   chance=7;
+   chance=5;
    required=0;
    a=0;
    b=0;
@@ -44,7 +44,7 @@ app.post("/", function(req,res){
   hollywood = "";
 found ="";
 alphabets = "";
-chance=7;
+chance=5;
 required=0;
 a=0;
 b=0;
